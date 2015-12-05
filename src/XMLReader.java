@@ -6,9 +6,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 
-public class ReadXMLFile {
+public class XMLReader {
 
-    public ReadXMLFile(String filename) {
+    public XMLReader(String filename) {
 
         try {
             File fXmlFile = new File(filename);

@@ -10,7 +10,7 @@ public class CVCreator {
     Object CV;
 
     public CVCreator() {
-        ReadXMLFile parser = new ReadXMLFile(resourcesFolderPath+filename);
+        XMLReader parser = new XMLReader(resourcesFolderPath+filename);
 //        Object CV = parser.getObject();
 //        System.out.println(CV.values());
     }
