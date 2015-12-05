@@ -1,11 +1,7 @@
-import java.util.HashMap;
-
 /**
  *
  * This is the main class for the whole CV creator system
  */
-
-import java.util.*;
 
 public class CVCreator {
 
@@ -14,7 +10,7 @@ public class CVCreator {
     Object CV;
 
     public CVCreator() {
-        CVParser parser = new CVParser(yamlFileName);
+        YamlParser parser = new YamlParser(yamlFileName);
         Object CV = parser.getObject();
 //        System.out.println(CV.values());
     }

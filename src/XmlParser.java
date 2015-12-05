@@ -1,21 +1,16 @@
-
+import org.ho.yaml.Yaml;
 import java.io.File;
-import java.io.FileNotFoundException;
-
-import com.oracle.tools.packager.Log;
-import org.ho.yaml.*;
-import org.ho.yaml.exception.ObjectCreationException;
 
 
-public class CVParser {
+public class XmlParser extends Parser {
 
     private String filename;
     boolean loaded = false;
     private Object yamlObject;
 
-    public CVParser(String filename) {
+    public XmlParser(String filename) {
         setFilename(filename);
-        loaded = loadYaml();
+        loaded = load();
     }
 
     public boolean isLoaded() {
@@ -30,7 +25,7 @@ public class CVParser {
         return filename;
     }
 
-    private boolean loadYaml() {
+    private boolean load() {
         File f = new File(CVCreator.resourcesFolderPath + filename);
         if (!f.exists()) {
             System.out.println("Problem");
@@ -46,12 +41,13 @@ public class CVParser {
         return true;
 
     }
-    
+
     public Object getObject(){
         if (!isLoaded())
-            loadYaml();
+            load();
         return yamlObject;
     }
+
 
 
 
