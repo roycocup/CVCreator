@@ -5,13 +5,13 @@
 
 public class CVCreator {
 
-    String yamlFileName = "cv.yaml";
+    String filename = "cv.xml";
     static String resourcesFolderPath = "resources/";
     Object CV;
 
     public CVCreator() {
-        YamlParser parser = new YamlParser(yamlFileName);
-        Object CV = parser.getObject();
+        ReadXMLFile parser = new ReadXMLFile(resourcesFolderPath+filename);
+//        Object CV = parser.getObject();
 //        System.out.println(CV.values());
     }
 
