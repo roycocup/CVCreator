@@ -11,8 +11,7 @@ public class CVCreator {
 
     public CVCreator() {
         XMLReader parser = new XMLReader(resourcesFolderPath+filename);
-//        Object CV = parser.getObject();
-//        System.out.println(CV.values());
+        parser.getRoot();
     }
 
     public static void main(String[] args) {new CVCreator();}
