@@ -1,15 +1,51 @@
 <?xml version="1.0"?>
-<company>
-    <staff id="1001">
-        <firstname>yong</firstname>
-        <lastname>mook kim</lastname>
-        <nickname>mkyong</nickname>
-        <salary>100000</salary>
-    </staff>
-    <staff id="2001">
-        <firstname>low</firstname>
-        <lastname>yin fong</lastname>
-        <nickname>fong fong</nickname>
-        <salary>200000</salary>
-    </staff>
-</company>
+<cv>
+    <personal>
+        <firstname>Rodrigo</firstname>
+        <lastname>Dias</lastname>
+        <address>5, Paymal House, London E1 3HR</address>
+        <email>rodrigo.pitta@gmail.com</email>
+        <dob>10/09/1976</dob>
+    </personal>
+    <overview>
+        I have moved to the UK in 2007 coming from Portugal.
+        I know a lot of frameworks and have good managerial skills.
+
+        Over the years I've been involved with a range of projects in a diverse set of industries.
+        Highlights include getting my hand dirty in the guts and at the edges of a foreign exchange trading system,
+        designing and implementing a social network from scratch, refactoring a number of websites to achieve
+        impressive increases in performance, traffic and revenue, and designing and implementing the public APIs
+        for one of the leading big data companies in the world as well as getting involved with some of the core
+        aspects of their platform.
+
+        I enjoy designing and building innovative software solutions. My motivation comes from solving tough problems
+        in efficient and cost-effective ways. I try not to tie myself to particular development environments,
+        programming languages or technologies, and light up at the prospect of learning something new. I'm always
+        looking for opportunities to put cutting edge technology through its paces in appropriate situations, and
+        also get great satisfaction from building rock solid systems build on well-established components.
+
+        What I look for in the work I do is a challenge, and that can come in many forms. Sometimes it's breaking new
+        ground, and other times it's taking an ageing system and formulating a plan to update it while ensuring
+        continuous service and data integrity.
+
+        My strongest skills lie in designing systems and guiding the development process, but that doesn't mean
+        I won't get my head down and get involved with the code. Watching a system design become real is incredibly
+        satisfying.
+    </overview>
+    <achievements>
+
+    </achievements>
+    <languages>
+        <php scale="100"></php>
+        <sql scale="85"></sql>
+        <java scale="50"></java>
+        <go scale="10"></go>
+        <rust scale="10"></rust>
+        <python scale="25"></python>
+    </languages>
+    <frameworks>
+
+    </frameworks>
+
+
+</cv>
