@@ -32,7 +32,6 @@ public class XMLReader {
         }
     }
 
-
     public Element getRoot(){
         return doc.getDocumentElement();
     }

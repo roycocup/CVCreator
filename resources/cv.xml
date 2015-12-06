@@ -33,15 +33,21 @@
         satisfying.
     </overview>
     <achievements>
-
+        <item>Designed and Implemented the backend for a scrapbook/photobook application running in cruiseliners.
+            All backend was PHP talking to a Flash/Actionscript Frontend.</item>
+        <item>Self thought PHP, HTML and CSS to develop a commercial product still running to this day
+        for the registration, treatment and invoicing of patients of a couple of dental surgeries [Frontspace - 2007]</item>
+        <item>Implemented several small utilities including a distributed CD Catalogue and a chat system
+            for company-wide use. [Fullscreen - 2005]</item>
+        <item>Developed 3D modeling for a commercial game made with Adobe Director [Fullscreen - 2004]</item>
     </achievements>
     <languages>
         <php scale="100"></php>
         <sql scale="85"></sql>
         <java scale="50"></java>
+        <python scale="25"></python>
         <go scale="10"></go>
         <rust scale="10"></rust>
-        <python scale="25"></python>
     </languages>
     <frameworks>
 
