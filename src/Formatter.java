@@ -1,4 +1,6 @@
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import uk.co.rodderscode.utils.Printer;
 
 import java.util.ArrayList;
@@ -11,15 +13,23 @@ public class Formatter {
     public String format(XMLReader parser)
     {
         this.parser = parser;
-        getTitleList();
+        //getTitleList();
+        getCategories();
         return "";
     }
 
-    public void getTitleList()
+    public String getTitleList()
     {
-        List l = new ArrayList<>();
-        Element e = parser.doc.getDocumentElement();
-        Printer.pl(e);
+        String e = parser.doc.getDocumentElement().getTagName();
+        return e;
+    }
+
+    public void getCategories(){
+        NodeList list = parser.getListByTagName("cv");
+        for (int i = 0; i < list.getLength(); i++) {
+            Node nNode = list.item(i);
+            Printer.pl(nNode.getChildNodes());
+        }
     }
 
 
