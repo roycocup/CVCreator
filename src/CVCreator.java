@@ -1,7 +1,9 @@
-import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import uk.co.rodderscode.utils.Printer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,7 +15,6 @@ public class CVCreator {
     private final static String filename = "cv.xml";
     private final static String resourcesFolderPath = "resources/";
 
-    Document doc;
     XMLReader model = new XMLReader();
     Formatter view = new Formatter();
 
@@ -21,14 +22,16 @@ public class CVCreator {
     public CVCreator() {
         model.setFilename(resourcesFolderPath+filename);
         model.load();
-        Printer.pl(doc);
+        getTitleList();
     }
 
-    public String getTitleList()
+    public void getTitleList()
     {
-        Document doc = model.getDocument();
-        String e = doc.getDocumentElement().getTagName();
-        return e;
+        List<String> list = new ArrayList<>();
+        NodeList nodes = model.getDocument().getElementsByTagName("section");
+        for(byte i = 0; i < nodes.getLength(); i++)
+            list.add(nodes.item(i).getAttributes().getNamedItem("title").toString());
+        Printer.pl(list);
     }
 
     public void getCategories(){

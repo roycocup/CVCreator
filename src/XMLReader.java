@@ -36,7 +36,6 @@ public class XMLReader {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
-            uk.co.rodderscode.utils.Logger.l("Warning", "this is fucked up");
             return false;
         }
     }
