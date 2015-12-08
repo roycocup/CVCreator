@@ -1,7 +1,6 @@
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import uk.co.rodderscode.framework.Controller;
 import uk.co.rodderscode.utils.Printer;
 
 /**
@@ -9,7 +8,7 @@ import uk.co.rodderscode.utils.Printer;
  * This is the main class for the CV creator system
  */
 
-public class CVCreator implements Controller {
+public class CVCreator {
 
     private final static String filename = "cv.xml";
     private final static String resourcesFolderPath = "resources/";
@@ -21,7 +20,7 @@ public class CVCreator implements Controller {
 
     public CVCreator() {
         model.setFilename(resourcesFolderPath+filename);
-        doc = model.load();
+        model.load();
         Printer.pl(doc);
     }
 

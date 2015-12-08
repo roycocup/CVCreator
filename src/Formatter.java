@@ -1,11 +1,8 @@
-import uk.co.rodderscode.framework.View;
-import uk.co.rodderscode.utils.Printer;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Formatter implements View {
+public class Formatter{
 
     List data = new ArrayList<>();
 

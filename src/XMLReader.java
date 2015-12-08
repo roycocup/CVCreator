@@ -1,14 +1,15 @@
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import uk.co.rodderscode.framework.Model;
 
 import java.io.File;
+import java.util.logging.Logger;
 
-public class XMLReader implements Model {
+public class XMLReader {
 
     private String filename;
     private Document doc;
@@ -25,17 +26,18 @@ public class XMLReader implements Model {
         return doc;
     }
 
-    public Document load(){
+    public Boolean load(){
         try {
             File fXmlFile = new File(filename);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             doc = dBuilder.parse(fXmlFile);
             doc.getDocumentElement().normalize();
-            return doc;
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            uk.co.rodderscode.utils.Logger.l("Warning", "this is fucked up");
+            return false;
         }
     }
 
