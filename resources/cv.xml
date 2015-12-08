@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <cv>
-    <personal>
+    <section title="personal">
         <firstname>Rodrigo</firstname>
         <lastname>Dias</lastname>
         <address>5, Paymal House, London E1 3HR</address>
         <email>rodrigo.pitta@gmail.com</email>
         <dob>10/09/1976</dob>
-    </personal>
-    <overview>
+    </section>
+    <section title="overview">
         I have moved to the UK in 2007 coming from Portugal.
         I know a lot of frameworks and have good managerial skills.
 
@@ -31,8 +31,8 @@
         My strongest skills lie in designing systems and guiding the development process, but that doesn't mean
         I won't get my head down and get involved with the code. Watching a system design become real is incredibly
         satisfying.
-    </overview>
-    <achievements>
+    </section>
+    <section title="achievements">
         <item>Designed and Implemented the backend for a scrapbook/photobook application running in cruiseliners.
             All backend was PHP talking to a Flash/Actionscript Frontend.</item>
         <item>Self thought PHP, HTML and CSS to develop a commercial product still running to this day
@@ -40,17 +40,17 @@
         <item>Implemented several small utilities including a distributed CD Catalogue and a chat system
             for company-wide use. [Fullscreen - 2005]</item>
         <item>Developed 3D modeling for a commercial game made with Adobe Director [Fullscreen - 2004]</item>
-    </achievements>
-    <languages>
-        <php scale="100"></php>
-        <sql scale="85"></sql>
-        <java scale="50"></java>
-        <python scale="25"></python>
-        <go scale="10"></go>
-        <rust scale="10"></rust>
-    </languages>
+    </section>
+    <section title="languages">
+        <sub title="php" scale="100"></sub>
+        <sub title="sql" scale="85"></sub>
+        <sub title="java" scale="50"></sub>
+        <sub title="python" scale="25"></sub>
+        <sub title="go" scale="10"></sub>
+        <sub title="rust" scale="10"></sub>
+    </section>
     <frameworks>
-
+        <sub title="laravel" scale="80"></sub>
     </frameworks>
 
 
