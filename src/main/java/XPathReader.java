@@ -12,6 +12,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 
 public class XPathReader {
@@ -24,12 +25,12 @@ public class XPathReader {
 
     public XPathReader(){}
 
-    public void load(File file){
+    public void load() {
         try {
             db = dbf.newDocumentBuilder();
-            d = db.parse(file);
+            d = db.parse(getFile());
             nl = (NodeList) xp.compile("//section").evaluate(d, XPathConstants.NODESET);
-        } catch(Exception e){
+        } catch (Exception e) {
             Printer.pl(e.getMessage());
         }
     }
@@ -41,7 +42,20 @@ public class XPathReader {
         }catch (XPathExpressionException e){
             Printer.pl(e.getMessage());
         }
+    }
 
+    private File getFile(){
+        File f;
+        try{
+            f = new File(Main.resourcesFolderPath+Main.filename);
+            if (f.exists() != true)
+                throw new FileNotFoundException();
+        } catch (Exception e){
+            Printer.pl(e.getMessage());
+            //TODO this is not very good... why is it legal?
+            return null;
+        }
+        return f;
     }
 
 
